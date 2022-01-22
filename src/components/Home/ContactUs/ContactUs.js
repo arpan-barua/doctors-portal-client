@@ -1,0 +1,29 @@
+import React from 'react';
+import './ContactUs.css';
+
+const ContactUs = () => {
+    return (
+        <section className='contact-container text-center mt-5 pt-4'>
+            <div>
+                <h6 style={{color:'#1CC7C1'}}>CONTACT US</h6>
+                <h3 style={{color:'white'}}>Always Connect With Us</h3>
+            </div>
+        <div style={{margin:"0 auto"}}class="w-50">
+            <div class="mb-3 mt-5">
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email Address*"/>
+</div>
+<div class="mb-3">
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Subject*"/>
+</div>
+<div class="mb-3">
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your Message*"></textarea>
+</div>
+<div>
+    <button className='btn btn-primary mt-2'>SUBMIT</button>
+</div>
+        </div>
+        </section>
+    );
+};
+
+export default ContactUs;

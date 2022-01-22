@@ -1,0 +1,19 @@
+.body{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+
+}
+.login-area{
+    border: 1px solid lightgray;
+    width: 400px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+}
+
+.google-btn{
+    margin-left: 43%;
+    margin-top: 20px;
+    border-radius: 20px;
+}
