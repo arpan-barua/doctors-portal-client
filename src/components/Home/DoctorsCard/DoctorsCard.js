@@ -2,10 +2,12 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const DoctorsCard = ({doctor}) => {
+    
     return (
         <div className='col-md-4 text-center'>
             <div>
-                <img style={{height:'250px'}} src={doctor.image} alt="" />
+                <img src={`data:image/png;base64,${doctor.image.img}`}/>
+                {/* <img style={{height:'250px'}} src={`http://localhost:5000/${doctor.img}`} alt="" /> */}
                 <h6>{doctor.name}</h6>
             </div>
 
