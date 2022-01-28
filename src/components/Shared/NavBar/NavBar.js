@@ -2,7 +2,7 @@ import React from 'react';
 
 const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light">
+        <nav className="navbar navbar-expand-lg navbar-light pe-5">
   <div className="container-fluid">
     <div className="collapse navbar-collapse  justify-content-end" id="navbarNav">
       <ul className="navbar-nav">

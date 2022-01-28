@@ -25,9 +25,9 @@ const Services = () => {
         <section className="services-container mt-5 pt-5">
             <div className='text-center'>
                 <h5 style={{color:'#1CC7C1'}}>OUR SERVICES</h5>
-                <h2>Services We Provide</h2>
+                <h1 style={{color:'#3A4256'}}>Services We Provide</h1>
             </div>
-        <div className='d-flex justify-content-center mt-5'>
+        <div className='d-flex justify-content-center mt-5 pt-4'>
            <div className='row w-75'>
            {
                serviceData.map(service => <ServiceDetail service={service}></ServiceDetail>)

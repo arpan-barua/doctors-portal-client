@@ -57,7 +57,7 @@ const AppointmentForm = ({modalIsOpen,closeModal,appointmentOn,date}) => {
       <input {...register("phoneNumber")} placeholder="Phone Number" className='form-control'/> <br />
       <input {...register("email")} placeholder="Email" className='form-control'/> <br />
       <input {...register("dateOfBirth")} placeholder="mm/dd/yyyy" className='form-control'/> <br />
-      <input className='submit btn btn-primary' type="submit" />
+      <input className='submit btn btn-brand' type="submit" />
     </form>
        </div>
       </Modal>

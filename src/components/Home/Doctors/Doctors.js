@@ -39,7 +39,7 @@ const Doctors = () => {
                 <h5 style={{color:'#1CC7C1'}}>Our Doctors</h5>
             </div>
         <div className='d-flex justify-content-center'>
-           <div className='row w-75 mt-5'>
+           <div className='row w-75 mt-5 mb-5 pb-5'>
            {
                doctors.map(doctor => <DoctorsCard doctor={doctor}></DoctorsCard>)
            }

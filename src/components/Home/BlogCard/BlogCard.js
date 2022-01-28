@@ -2,13 +2,14 @@ import React from 'react';
 
 const BlogCard = ({blog}) => {
     return (
-        <div className='col-md-4 border-end mt-5 pt-4'>
+        <div className='col-md-4 border-end ps-2 pe-2'>
             <div className='d-flex'>
                 <div>
-                    <img src={blog.image} alt="" />
+                    <img style={{height:'50px'}} src={blog.image} alt="" />
                 </div>
-                <div>
-                    <h6 className='ps-3'>{blog.name}</h6>
+                <div className='ps-3'>
+                    <h6>{blog.name}</h6>
+                    <small className='text-secondary'>{blog.date}</small>
                 </div>
             </div>
             <h5 className='pt-3' style={{color:'#3A4256'}}>{blog.title}</h5> <br />

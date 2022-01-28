@@ -1,10 +1,10 @@
 .doctor-image img{
-    height: 432px;
+    height: 482px;
     position: relative; 
     top: -130px;
 }
 .appointment-container {
-    height:350px;
+    height:400px;
     width:100%; 
     background-image: url('../../../images/chairBg.png');
     background-color: #3A4256;

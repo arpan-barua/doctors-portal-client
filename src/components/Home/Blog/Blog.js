@@ -8,16 +8,19 @@ const blogData=[
     {
         image: people1,
         name: 'Dr. Caudi',
+        date: '24 June 2021',
         title: '2 times of brush in a day can keep you healthy'
     },
     {
         image: people2,
         name: 'Dr. Paula',
+        date: '24 June 2021',
         title: 'The tooth cancer is taking a challenge'
     },
     {
         image: people3,
         name: 'Dr. Tammy',
+        date: '24 June 2021',
         title: 'Scaling removes tartar and keeps teeth and gums healthy'
     }
 
@@ -30,7 +33,7 @@ const Blog = () => {
                 <h5 style={{color:'#1CC7C1'}}>OUR BLOG</h5>
                 <h1 style={{color:'#3A4256'}}>From Our Blog News</h1>
             </div>
-            <div className='d-flex justify-content-center'>
+            <div className='d-flex justify-content-center mt-5 pt-4'>
            <div className='row w-75'>
            {
                blogData.map(blog => <BlogCard blog={blog}></BlogCard>)

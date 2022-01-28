@@ -12,7 +12,7 @@ const BusinessInfo = () => {
         },
         {
             title:'Visit our location',
-            description:'Brooklyn,NY 30200,United States',
+            description:'Brooklyn, NY, United States',
             icon:faMapMarker,
             background:'dark'
         },

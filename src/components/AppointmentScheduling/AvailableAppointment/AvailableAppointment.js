@@ -42,7 +42,7 @@ const appointments = [
 const AvailableAppointment = ({date}) => {
     return (
         <section>
-            <h2 style={{color:'#1CC7C1'}} className='text-center'>Available Appointments On {date.toDateString()}</h2>
+            <h2 style={{color:'#1CC7C1'}} className='text-center mt-5 pt-2'>Available Appointments On {date.toDateString()}</h2>
             <div className='row'>
                 {
                     appointments.map(appointment => <AppointmentCard date={date} key={appointment.id} appointment={appointment}></AppointmentCard>)

@@ -6,7 +6,7 @@ const InfoCard = ({info}) => {
     return (
         <div className='col-md-4 text-white'>
           <div className={`d-flex info-container info-card info-${info.background}`}>
-            <div className='mr-3'>
+            <div className='me-3'>
                 <FontAwesomeIcon className='info-icon' icon={info.icon} />
             </div>
             <div>
