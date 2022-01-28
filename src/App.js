@@ -23,12 +23,12 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home/>}/>
+        <Route path='/' element={<Home/>}/>
         <Route path="/home" element={<Home/>}/>
         <Route path="/appointmentScheduling" element={<AppointmentScheduling/>}/>
         <Route path="/dashboard/appointment" element={<Dashboard/>}/>
-        <Route path="/allPatients" element={<AllPatients/>}/>
-        <Route path="/addDoctor" element={<AddDoctor/>}/>
+        <Route path="/allPatients" element={<PrivateRoute><AllPatients/></PrivateRoute>}/>
+        <Route path="/addDoctor" element={<PrivateRoute><AddDoctor/></PrivateRoute>}/>
         <Route path="/login" element={<Login/>}/>
       </Routes>
     </Router>

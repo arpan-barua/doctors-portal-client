@@ -6,7 +6,7 @@ import firebase from 'firebase/compat/app';
 import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import firebaseConfig from './firebase.config';
 import {UserContext} from '../../App';
-import { useNavigate, useLocation } from 'react-router';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 
 const Login = () => {
@@ -16,9 +16,9 @@ const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [newUser, setNewUser] = useState(false);
     
-    let history = useNavigate();
+    let navigate = useNavigate();
     let location = useLocation();
-    let { from } = location.state || { from: { pathname: "/" } };
+    // let { from } = location.state || { from: { pathname: "/" } };
 
     const handleGoogleSignIn = () =>{
     const googleProvider = new GoogleAuthProvider(); //firebase.auth.GoogleAuthProvider();
@@ -33,7 +33,10 @@ const Login = () => {
     email:email,
     }
     setLoggedInUser(signedInUser);
-    history.replace(from);
+    if(location.state?.from){
+    navigate(location.state.from);
+    }
+    // history.replace(from);
  })
  .catch(err =>{
    console.log(err);
@@ -88,6 +91,9 @@ const Login = () => {
          newUserInfo.error= '';
          newUserInfo.success = true;
          setLoggedInUser(newUserInfo);
+         if(location.state?.from){
+          navigate(location.state.from);
+          }
        })
          
        .catch((error) => {
