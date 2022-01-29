@@ -11,7 +11,8 @@
   /* Sidebar links */
   .sidebar a {
     display: block;
-    color: black;
+    color: white;
+    font-weight: 500;
     padding: 16px;
     text-decoration: none;
   }

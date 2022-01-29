@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Sidebar from '../../Dashboard/Sidebar/Sidebar';
 import AppointmentDataTable from '../AppointmentDataTable/AppointmentDataTable';
 
 const AllPatients = () => {
@@ -12,9 +13,10 @@ const AllPatients = () => {
     }, []);
 
     return (
-        <div className='container-fluid row'>
-            <div className='col-md-10'>
-                <h5>All Patients</h5>
+        <div className='container-fluid row mt-4'>
+            <div className='col-md-3'><Sidebar></Sidebar></div>
+            <div className='col-md-9'>
+                <h5 style={{color:'#1CC7C1'}}>All Patients</h5>
                 <AppointmentDataTable appointments={appointments}></AppointmentDataTable>
             </div>
             

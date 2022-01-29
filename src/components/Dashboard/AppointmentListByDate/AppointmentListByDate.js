@@ -11,7 +11,7 @@ const AppointmentListByDate = ({appointments}) => {
                <AppointmentShortList appointments={appointments}></AppointmentShortList>
                :
                <div>
-                   <h4 className='text-center'>No available appointment on this date</h4>
+                   <h4 className='text-center text-secondary'>No available appointment on this date</h4>
                </div>
             }
         </div>

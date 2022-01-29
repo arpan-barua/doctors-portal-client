@@ -25,11 +25,12 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path="/home" element={<Home/>}/>
-        <Route path="/appointmentScheduling" element={<AppointmentScheduling/>}/>
-        <Route path="/dashboard/appointment" element={<Dashboard/>}/>
-        <Route path="/allPatients" element={<PrivateRoute><AllPatients/></PrivateRoute>}/>
-        <Route path="/addDoctor" element={<PrivateRoute><AddDoctor/></PrivateRoute>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/appointmentScheduling" element={<AppointmentScheduling/>}/>
+        <Route path="/dashboard" element={<PrivateRoute><Dashboard/></PrivateRoute>}/>
+        <Route path="/dashboard/allPatients" element={<PrivateRoute><AllPatients/></PrivateRoute>}/>
+        <Route path="/dashboard/addDoctor" element={<PrivateRoute><AddDoctor/></PrivateRoute>}/>
+        
       </Routes>
     </Router>
     </UserContext.Provider>

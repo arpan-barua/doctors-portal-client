@@ -28,7 +28,7 @@ const blogData=[
 
 const Blog = () => {
     return (
-        <section>
+        <section id='blog'>
             <div className='text-center mt-5 pt-5'>
                 <h5 style={{color:'#1CC7C1'}}>OUR BLOG</h5>
                 <h1 style={{color:'#3A4256'}}>From Our Blog News</h1>

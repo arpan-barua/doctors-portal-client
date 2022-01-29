@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Sidebar from '../Dashboard/Sidebar/Sidebar';
 
 const AddDoctor = () => {
 
@@ -35,24 +36,26 @@ const AddDoctor = () => {
   })
     }
 
+
     return (
-        <section className='container-fluid row'>
-            <div className='col-md-10'>
-                <h5>Add a Doctor</h5>
+        <section className='container-fluid row mt-4'>
+          <div className='col-md-3'><Sidebar></Sidebar></div>
+            <div className='col-md-6'>
+                <h5 style={{color:'#1CC7C1'}}>Add a Doctor</h5> <br />
             <form onSubmit={handleSubmit}>
-  <div class="form-group">
+  <div className="form-group text-secondary">
     <label for="exampleInputEmail1">Email address</label>
-    <input onBlur={handleBlur} type="email" class="form-control" name="email" placeholder="Enter email"/>
+    <input onBlur={handleBlur} type="email" className="form-control" name="email" placeholder="Enter email"/><br />
   </div>
-  <div class="form-group">
+  <div className="form-group text-secondary">
     <label for="exampleInputPassword1">Name</label>
-    <input onBlur={handleBlur} type="text" class="form-control" name="name" placeholder="Name"/>
+    <input onBlur={handleBlur} type="text" className="form-control" name="name" placeholder="Name"/> <br />
   </div>
-  <div class="form-group">
+  <div className="form-group text-secondary">
     <label for="exampleInputPassword1">Upload a image</label>
-    <input onChange={handleFileChange} type="file" class="form-control" placeholder="Picture"/>
+    <input onChange={handleFileChange} type="file" className="form-control" placeholder="Picture"/> <br />
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" className="btn btn-brand">Submit</button>
 </form>
             </div>
         </section>

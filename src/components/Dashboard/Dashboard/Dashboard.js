@@ -28,11 +28,11 @@ const Dashboard = () => {
 
     return (
         <section>
-            <div className='container-fluid row'>
-            <div className='col-md-2'>
+            <div className='container-fluid row mt-3'>
+            <div className='col-md-3'>
                 <Sidebar></Sidebar>
             </div>
-            <div className='col-md-5 mt-3'>
+            <div className='col-md-4 mt-3'>
             <Calendar
            onChange={handleDateChange}
            value={new Date()}

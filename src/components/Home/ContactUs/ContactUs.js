@@ -3,7 +3,7 @@ import './ContactUs.css';
 
 const ContactUs = () => {
     return (
-        <section className='contact-container text-center mt-5 pt-4'>
+        <section className='contact-container text-center mt-5 pt-4' id='contact'>
             <div>
                 <h5 style={{color:'#1CC7C1'}}>CONTACT US</h5>
                 <h1 style={{color:'white'}}>Always Connect With Us</h1>

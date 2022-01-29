@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const NavBar = () => {
     return (
@@ -7,22 +8,22 @@ const NavBar = () => {
     <div className="collapse navbar-collapse  justify-content-end" id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <a className="nav-link p-4" href="#">Home</a>
+          <Link to="/home" className="nav-link p-4">Home</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link p-4" href="#">About</a>
+          <Link to="/dashboard" className="nav-link p-4">Dashboard</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link p-4" href="#">Dental Services</a>
+        <Link to="#services" className="nav-link p-4">Services</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link p-4 text-white" href="#">Reviews</a>
+        <Link to="#reviews" className="nav-link p-4 text-white">Reviews</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link p-4 text-white" href="#">Blog</a>
+        <Link to="#blog" className="nav-link p-4 text-white">Blog</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link p-4 text-white" href="#">Contact Us</a>
+        <Link to="#contact" className="nav-link p-4 text-white">Contact Us</Link>
         </li>
         </ul>
     </div>

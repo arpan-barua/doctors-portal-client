@@ -24,7 +24,7 @@ const testimonialData = [
 
 const Testimonial = () => {
     return (
-        <section className='testimonial-container mt-5 pt-5'>
+        <section className='testimonial-container mt-5 pt-5' id='reviews'>
             <div className='ms-5 ps-5'>
                 <h5 style={{color:'#1CC7C1'}}>TESTIMONIAL</h5>
                 <h1 style={{color:'#3A4256'}}>What's Our Patients <br /> Says</h1>

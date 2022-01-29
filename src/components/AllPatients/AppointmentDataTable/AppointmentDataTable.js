@@ -4,12 +4,12 @@ const AppointmentDataTable = ({appointments}) => {
     return (
         <table class="table table-striped">
   <thead>
-    <tr>
+    <tr className='text-secondary'>
       <th className='text-secondary' scope="col">#</th>
       <th className='text-secondary' scope="col">Name</th>
       <th className='text-secondary' scope="col">Phone</th>
       <th className='text-secondary' scope="col">Email</th>
-      <th className='text-secondary' scope="col">dateOfBirth</th>
+      <th className='text-secondary' scope="col">Date Of Birth</th>
     </tr>
   </thead>
   <tbody>

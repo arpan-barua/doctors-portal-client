@@ -21,13 +21,15 @@ const Sidebar = () => {
     return (
         <section>
             <div className="sidebar">
-            <Link to="/dashboard/appointment">Dashboard</Link>
-            {
-                isDoctor && <div> 
-                    <Link to="/appointmentScheduling">Appointment</Link>
-                    <Link to="/dashboard/allPatients">Patients</Link>
-                </div>
-            }
+            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/home">Home</Link>
+            <Link to="/appointmentScheduling">Make Appointment</Link>
+             {
+               isDoctor && <div>
+                 <Link to="/dashboard/allPatients">Patients</Link>
+                 <Link to="/dashboard/addDoctor">Add Doctor</Link>
+              </div>
+             }
             </div>
         </section>
 
