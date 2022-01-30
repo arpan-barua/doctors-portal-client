@@ -5,7 +5,7 @@ import AppointmentDataTable from '../AppointmentDataTable/AppointmentDataTable';
 const AllPatients = () => {
 
     const [appointments, setAppointments] = useState([]);
-
+   
     useEffect(() => {
         fetch('http://localhost:5000/appointments')
         .then(res => res.json())
@@ -14,8 +14,9 @@ const AllPatients = () => {
 
     return (
         <div className='container-fluid row mt-4'>
-            <div className='col-md-3'><Sidebar></Sidebar></div>
-            <div className='col-md-9'>
+            {appointments.date}
+            <div className='col-md-2'><Sidebar></Sidebar></div>
+            <div className='col-md-10'>
                 <h5 style={{color:'#1CC7C1'}}>All Patients</h5>
                 <AppointmentDataTable appointments={appointments}></AppointmentDataTable>
             </div>

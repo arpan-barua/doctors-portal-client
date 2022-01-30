@@ -12,6 +12,14 @@
   color: white;
 }
 
+.background-image{
+    height:900px;
+    width:100%; 
+    position: relative;
+    background-image: url('./images/chairBg.png');
+    background-size: cover; 
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

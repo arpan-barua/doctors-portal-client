@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FooterCard = ({footer}) => {
     return (
@@ -11,9 +12,7 @@ const FooterCard = ({footer}) => {
                 <small>{footer.treatment}</small><br />
                 <small>{footer.toothExtraction}</small>
                 <small>{footer.address}</small><br />
-                <FontAwesomeIcon icon={footer.icon1}></FontAwesomeIcon>
-                <FontAwesomeIcon icon={footer.icon2}></FontAwesomeIcon>
-                <FontAwesomeIcon icon={footer.icon3}></FontAwesomeIcon>
+                <Link to='//facebook.com' target="_blank"><FontAwesomeIcon icon={footer.icon1}/></Link> <Link to='//google.com' target="_blank"><FontAwesomeIcon icon={footer.icon2}/></Link> <Link to='//twitter.com' target="_blank"><FontAwesomeIcon icon={footer.icon3}/></Link>
             </div>
             
         </div>

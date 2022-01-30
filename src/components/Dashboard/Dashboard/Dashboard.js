@@ -5,6 +5,7 @@ import { UserContext } from '../../../App';
 import AppointmentListByDate from '../AppointmentListByDate/AppointmentListByDate';
 import Sidebar from '../Sidebar/Sidebar';
 
+
 const Dashboard = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -28,7 +29,7 @@ const Dashboard = () => {
 
     return (
         <section>
-            <div className='container-fluid row mt-3'>
+            <div className='container-fluid row background-image mt-3'>
             <div className='col-md-3'>
                 <Sidebar></Sidebar>
             </div>

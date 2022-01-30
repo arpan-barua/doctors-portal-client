@@ -56,7 +56,15 @@ const AppointmentForm = ({modalIsOpen,closeModal,appointmentOn,date}) => {
       <input {...register("yourName")} placeholder="Your Name" className='form-control mt-4' /> <br />
       <input {...register("phoneNumber")} placeholder="Phone Number" className='form-control'/> <br />
       <input {...register("email")} placeholder="Email" className='form-control'/> <br />
-      <input {...register("dateOfBirth")} placeholder="mm/dd/yyyy" className='form-control'/> <br />
+      <select className='text-secondary' {...register("time")}>
+        <option selected>Select Appointment Time</option>
+        <option value="1:00 PM">1:00 PM</option>
+        <option value="2:00 PM">2:00 PM</option>
+        <option value="3:00 PM">3:00 PM</option>
+        <option value="4:00 PM">4:00 PM</option>
+        <option value="5:00 PM">5:00 PM</option>
+        <option value="6:00 PM">6:00 PM</option>
+      </select> <br /> <br />
       <input className='submit btn btn-brand' type="submit" />
     </form>
        </div>

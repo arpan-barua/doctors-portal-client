@@ -5,7 +5,7 @@
 
 }
 .login-area{
-    border: 1px solid lightgray;
+    /* border: 1px solid lightgray; */
     width: 400px;
     border-radius: 5px;
     text-align: center;
@@ -13,7 +13,7 @@
 }
 
 .google-btn{
-    margin-left: 43%;
+    margin-left: 35%;
     margin-top: 20px;
     border-radius: 20px;
 }

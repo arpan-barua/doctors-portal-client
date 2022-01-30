@@ -36,13 +36,19 @@ const AddDoctor = () => {
   })
     }
 
+    const submitArea = {
+      margin: '30px',
+      padding: '40px',
+      borderRadius: '10px',
+      boxShadow: '5px 5px 10px grey'
+  }
 
     return (
-        <section className='container-fluid row mt-4'>
+        <section className='container-fluid row background-image mt-4'>
           <div className='col-md-3'><Sidebar></Sidebar></div>
-            <div className='col-md-6'>
-                <h5 style={{color:'#1CC7C1'}}>Add a Doctor</h5> <br />
-            <form onSubmit={handleSubmit}>
+            <div className='col-md-7'>
+                <h5 style={{color:'#1CC7C1'}} className='mt-4 ms-4'>Add a Doctor</h5> <br />
+            <form style={submitArea} onSubmit={handleSubmit}>
   <div className="form-group text-secondary">
     <label for="exampleInputEmail1">Email address</label>
     <input onBlur={handleBlur} type="email" className="form-control" name="email" placeholder="Enter email"/><br />
