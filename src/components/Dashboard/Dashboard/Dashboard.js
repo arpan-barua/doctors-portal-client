@@ -30,17 +30,17 @@ const Dashboard = () => {
     return (
         <section>
             <div className='container-fluid row background-image mt-3'>
-            <div className='col-md-3'>
+            <div className='col-md-2'>
                 <Sidebar></Sidebar>
             </div>
-            <div className='col-md-4 mt-3'>
+            <div className='col-md-3'>
             <Calendar
            onChange={handleDateChange}
            value={new Date()}
             />
             </div>
-            <div className='col-md-5 mt-3'>
-                <AppointmentListByDate appointments={appointments}></AppointmentListByDate>
+            <div className='col-md-7'>
+                <AppointmentListByDate appointments={appointments} selectedDate={selectedDate}></AppointmentListByDate>
             </div>
             </div>
         </section>

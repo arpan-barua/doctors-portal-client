@@ -1,11 +1,14 @@
 import React from 'react';
 import AppointmentShortList from '../AppointmentShortList/AppointmentShortList';
 
-const AppointmentListByDate = ({appointments}) => {
+const AppointmentListByDate = ({appointments,selectedDate}) => {
     
     return (
         <div>
-            <h2 style={{color:"#1CC7C1"}} className='text-center mb-4'>Appointments</h2>
+            <div className='text-center mb-4'>
+            <h2 style={{color:"#1CC7C1"}}>Appointments</h2>
+            <small className='text-secondary'>ON {selectedDate.toDateString()}</small>
+            </div>
             {
                 appointments.length ?
                <AppointmentShortList appointments={appointments}></AppointmentShortList>
