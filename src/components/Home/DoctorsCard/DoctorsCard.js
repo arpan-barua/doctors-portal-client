@@ -16,7 +16,6 @@ const DoctorsCard = ({doctor}) => {
             <div>
                 <FontAwesomeIcon icon={faPhoneAlt} /> 
             </div>
-
             <div>
                 <small className='text-secondary'>{doctor.phone}</small>
             </div>

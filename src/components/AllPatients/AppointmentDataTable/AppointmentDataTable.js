@@ -27,7 +27,6 @@ const AppointmentDataTable = ({appointments}) => {
       <td>{appointment.yourName}</td>
       <td>{appointment.phoneNumber}</td>
       <td>{appointment.email}</td>
-      
     </tr>
      )}
   </tbody>

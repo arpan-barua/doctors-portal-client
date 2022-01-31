@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AppointmentShortList = ({appointments}) => {
-    console.log(appointments);
+    
     return (
         <table class="table table-striped">
   <thead>
