@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import './Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalendarCheck, faHome, faTh, faUserInjured, faUserPlus } from '@fortawesome/free-solid-svg-icons'
+import { faCalendarCheck, faHome, faTh, faUserInjured, faUserPlus, faSignOutAlt} from '@fortawesome/free-solid-svg-icons'
 
 const Sidebar = () => {
 
@@ -20,6 +20,16 @@ const Sidebar = () => {
     .then(data => setIsDoctor(data))
     }, []);
 
+    const handleSignOut = () =>{
+      const signedOutUser = {
+        isSignedIn: false,
+        name: '',
+        email: '',
+        success: false
+      }
+      setLoggedInUser(signedOutUser);
+    }
+
     return (
         <section>
             <div className="sidebar">
@@ -32,6 +42,8 @@ const Sidebar = () => {
                  <Link to="/dashboard/addDoctor"><FontAwesomeIcon icon={faUserPlus}/> Add Doctor</Link>
               </div>
              }
+             <Link to="" onClick={handleSignOut}><FontAwesomeIcon icon={faSignOutAlt}/> Log Out</Link>
+             
             </div>
         </section>
 

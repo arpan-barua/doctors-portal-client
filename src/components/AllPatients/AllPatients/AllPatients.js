@@ -14,7 +14,6 @@ const AllPatients = () => {
 
     return (
         <div className='container-fluid row mt-4'>
-            {appointments.date}
             <div className='col-md-2'><Sidebar></Sidebar></div>
             <div className='col-md-10'>
                 <h5 style={{color:'#1CC7C1'}}>All Patients</h5>

@@ -1,15 +1,14 @@
 import React, { useContext, useState } from 'react';
 import './Login.css';
 import firebase from 'firebase/compat/app';
-// import "firebase/auth";
-// import { GoogleAuthProvider } from "firebase/auth";
-import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword,signOut } from "firebase/auth";
 import firebaseConfig from './firebase.config';
 import {UserContext} from '../../App';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Navigate} from 'react-router-dom';
 import login from '../../images/login.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle } from '@fortawesome/free-brands-svg-icons'
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import NavBar from '../Shared/NavBar/NavBar';
 
 
 const Login = () => {
@@ -21,11 +20,9 @@ const Login = () => {
     
     let navigate = useNavigate();
     let location = useLocation();
-    // let { from } = location.state || { from: { pathname: "/" } };
 
     const handleGoogleSignIn = () =>{
-    const googleProvider = new GoogleAuthProvider(); //firebase.auth.GoogleAuthProvider();
-    // firebase.auth().signInWithPopup(googleProvider)
+    const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
     signInWithPopup(auth, googleProvider)
     .then(res => {
@@ -34,16 +31,34 @@ const Login = () => {
     isSignedIn: true,
     name:displayName,
     email:email,
+    success:true
     }
     setLoggedInUser(signedInUser);
     if(location.state?.from){
     navigate(location.state.from);
     }
-    // history.replace(from);
  })
  .catch(err =>{
    console.log(err);
  })
+ }
+
+ const handleSignOut = ()=>{
+  const auth = getAuth();
+  signOut(auth)
+  .then(res => {
+    const signedOutUser = {
+      isSignedIn: false,
+      name: '',
+      email: '',
+      photo: '',
+      success: false
+    }
+    setLoggedInUser(signedOutUser)
+  })
+  .catch((error) => {
+// An error happened.
+});
  }
 
     const handleBlur = (e) =>{
@@ -68,7 +83,6 @@ const Login = () => {
      
       const handleSubmit = (e) =>{
      if(newUser && loggedInUser.email && loggedInUser.password){
-      //  firebase.auth().createUserWithEmailAndPassword(loggedInUser.email, loggedInUser.password)
       const auth = getAuth();
       createUserWithEmailAndPassword(auth, loggedInUser.email, loggedInUser.password)
        .then(res => {
@@ -86,7 +100,6 @@ const Login = () => {
      }
      
      if(!newUser && loggedInUser.email && loggedInUser.password){
-      //  firebase.auth().signInWithEmailAndPassword(loggedInUser.email, loggedInUser.password)
       const auth = getAuth();
       signInWithEmailAndPassword(auth, loggedInUser.email, loggedInUser.password)
        .then(res => {
@@ -109,8 +122,12 @@ const Login = () => {
      
      e.preventDefault();
       }
+
+ 
+
     return (
         <div className='d-flex row'>
+          <NavBar></NavBar>
           <div className='col-md-6 ps-5'>
             <div className="body">
             <div className="login-area shadow-sm">
@@ -136,8 +153,8 @@ const Login = () => {
             </div>
             <div className="google-btn">
               <button className="btn btn-brand rounded-pill" onClick={handleGoogleSignIn}> <FontAwesomeIcon icon={faGoogle}/> Continue with Google </button>
-              
             </div>
+            {loggedInUser.success && <Navigate to="/dashboard"></Navigate>}
             </div>
             <div className='col-md-6 mt-5 pt-5 ps-3'>
                   <img style={{height: '600px'}} src={login} alt="" />

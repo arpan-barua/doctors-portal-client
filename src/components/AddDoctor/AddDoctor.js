@@ -50,16 +50,14 @@ const AddDoctor = () => {
                 <h5 style={{color:'#1CC7C1'}} className='mt-4 ms-4'>Add a Doctor</h5> <br />
             <form style={submitArea} onSubmit={handleSubmit}>
   <div className="form-group text-secondary">
-    <label for="exampleInputEmail1">Email address</label>
-    <input onBlur={handleBlur} type="email" className="form-control" name="email" placeholder="Enter email"/><br />
+    <input onBlur={handleBlur} type="email" className="form-control" name="email" placeholder="Enter email" required/><br />
   </div>
   <div className="form-group text-secondary">
-    <label for="exampleInputPassword1">Name</label>
-    <input onBlur={handleBlur} type="text" className="form-control" name="name" placeholder="Name"/> <br />
+    <input onBlur={handleBlur} type="text" className="form-control" name="name" placeholder="Name" required/> <br />
   </div>
   <div className="form-group text-secondary">
     <label for="exampleInputPassword1">Upload a image</label>
-    <input onChange={handleFileChange} type="file" className="form-control" placeholder="Picture"/> <br />
+    <input onChange={handleFileChange} type="file" className="form-control" placeholder="Picture" required/> <br />
   </div>
   <button type="submit" className="btn btn-brand">Submit</button>
 </form>
