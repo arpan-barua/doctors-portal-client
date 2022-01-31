@@ -97,6 +97,7 @@ const Login = () => {
          newUserInfo.success = false;
          setLoggedInUser(newUserInfo);
        });
+       
      }
      
      if(!newUser && loggedInUser.email && loggedInUser.password){
@@ -104,6 +105,7 @@ const Login = () => {
       signInWithEmailAndPassword(auth, loggedInUser.email, loggedInUser.password)
        .then(res => {
          const newUserInfo = {...loggedInUser};
+         newUserInfo.isSignedIn = true;
          newUserInfo.error= '';
          newUserInfo.success = true;
          setLoggedInUser(newUserInfo);
@@ -114,12 +116,12 @@ const Login = () => {
          
        .catch((error) => {
          const newUserInfo = {...loggedInUser};
-         newUserInfo.error = error.message;
+         newUserInfo.isSignedIn = false;
+         newUserInfo.error = 'Invalid username or password, please try again';
          newUserInfo.success = false;
          setLoggedInUser(newUserInfo);
        });
      }
-     
      e.preventDefault();
       }
 
@@ -135,9 +137,9 @@ const Login = () => {
                 <form onSubmit={handleSubmit}>
                     {newUser && <input className='form-control' type="text" name="name" onBlur={handleBlur} id="" placeholder="Your Name" required/>}
                     <br/>
-                    <input className='form-control' type="text" name="email" onBlur={handleBlur} id="" placeholder="Your Email address" required/>
+                    <input className='form-control' type="text" name="email" onBlur={handleBlur} id="" placeholder="Email" required/>
                     <br/>
-                    <input className='form-control' type="password" name="password" onBlur={handleBlur} id="" placeholder="Your Password" required/>
+                    <input className='form-control' type="password" name="password" onBlur={handleBlur} id="" placeholder="Password" required/>
                     <br/>
                     {newUser && <input className='form-control' type="password" name="confirm-password" onBlur={handleBlur} id="" placeholder="Confirm Password" required/>}
                     <br/>
@@ -148,13 +150,13 @@ const Login = () => {
                 <input type="checkbox" name="newUser" onChange={()=>setNewUser(!newUser)} id=""/> 
      <label htmlFor="newUser" className='text-secondary'>Create New Account</label>
      <p style={{color:'red'}}>{loggedInUser.error}</p>
-     {loggedInUser.success && <p style={{color:'green'}}>User {newUser ? 'created' : 'Logged In'} Successfully</p>}
+     {newUser && loggedInUser.success && <p style={{color:'green'}}>User Created Successfully</p>}
             </div>
             </div>
             <div className="google-btn">
               <button className="btn btn-brand rounded-pill" onClick={handleGoogleSignIn}> <FontAwesomeIcon icon={faGoogle}/> Continue with Google </button>
             </div>
-            {loggedInUser.success && <Navigate to="/dashboard"></Navigate>}
+            {loggedInUser.isSignedIn && <Navigate to="/dashboard"></Navigate>}
             </div>
             <div className='col-md-6 mt-5 pt-5 ps-3'>
                   <img style={{height: '600px'}} src={login} alt="" />

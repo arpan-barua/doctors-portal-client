@@ -42,7 +42,7 @@ const Sidebar = () => {
                  <Link to="/dashboard/addDoctor"><FontAwesomeIcon icon={faUserPlus}/> Add Doctor</Link>
               </div>
              }
-             <Link to="" onClick={handleSignOut}><FontAwesomeIcon icon={faSignOutAlt}/> Log Out</Link>
+             <Link to="" onClick={handleSignOut}><FontAwesomeIcon icon={faSignOutAlt}/> Logout</Link>
              
             </div>
         </section>
