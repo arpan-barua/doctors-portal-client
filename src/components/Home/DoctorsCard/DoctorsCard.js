@@ -1,5 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 
 const DoctorsCard = ({doctor}) => {
     
@@ -13,8 +14,9 @@ const DoctorsCard = ({doctor}) => {
 
             <div className='d-flex justify-content-center'>
             <div>
-                <FontAwesomeIcon icon={doctor.icon} />
+                <FontAwesomeIcon icon={faPhoneAlt} /> 
             </div>
+
             <div>
                 <small className='text-secondary'>{doctor.phone}</small>
             </div>

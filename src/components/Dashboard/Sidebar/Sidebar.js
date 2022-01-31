@@ -37,7 +37,7 @@ const Sidebar = () => {
             <Link to="/home"><FontAwesomeIcon icon={faHome}/> Home</Link>
             <Link to="/appointmentScheduling"><FontAwesomeIcon icon={faCalendarCheck}/> Make Appointment</Link>
              {
-               isDoctor && <div>
+              isDoctor && <div>
                  <Link to="/dashboard/allPatients"><FontAwesomeIcon icon={faUserInjured}/> Patients</Link>
                  <Link to="/dashboard/addDoctor"><FontAwesomeIcon icon={faUserPlus}/> Add Doctor</Link>
               </div>

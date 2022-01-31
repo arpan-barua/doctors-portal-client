@@ -1,28 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import doctor from '../../../images/doctor-small.png';
-import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import DoctorsCard from '../DoctorsCard/DoctorsCard';
 
-// const doctorsData = [
-//     {
-//         image: doctor,
-//         name: 'Dr. Caudi',
-//         icon: faPhoneAlt,
-//         phone: '+61452200126'
-//     },
-//     {
-//         image: doctor,
-//         name: 'Dr. Caudi',
-//         icon: faPhoneAlt,
-//         phone: '+61452200126'
-//     },
-//     {
-//         image: doctor,
-//         name: 'Dr. Caudi',
-//         icon: faPhoneAlt,
-//         phone: '+61452200126'
-//     }
-// ]
 const Doctors = () => {
 
     const [doctors, setDoctors] = useState([]);

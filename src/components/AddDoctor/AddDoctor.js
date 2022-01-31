@@ -21,7 +21,8 @@ const AddDoctor = () => {
         const formData = new FormData()
   formData.append('file', file);
   formData.append('name', info.name);
-  formData.append('email', info.email)
+  formData.append('email', info.email);
+  formData.append('phone', info.phone);
 
   fetch('http://localhost:5000/addADoctor', {
     method: 'POST',
@@ -50,10 +51,13 @@ const AddDoctor = () => {
                 <h5 style={{color:'#1CC7C1'}} className='mt-4 ms-4'>Add a Doctor</h5> <br />
             <form style={submitArea} onSubmit={handleSubmit}>
   <div className="form-group text-secondary">
-    <input onBlur={handleBlur} type="email" className="form-control" name="email" placeholder="Enter email" required/><br />
+    <input onBlur={handleBlur} type="text" className="form-control" name="name" placeholder="Name" required/> <br />
   </div>
   <div className="form-group text-secondary">
-    <input onBlur={handleBlur} type="text" className="form-control" name="name" placeholder="Name" required/> <br />
+    <input onBlur={handleBlur} type="email" className="form-control" name="email" placeholder="Email" required/><br />
+  </div>
+  <div className="form-group text-secondary">
+  <input onBlur={handleBlur} type="tel" className="form-control" name="phone" placeholder="Phone" required/> <br />
   </div>
   <div className="form-group text-secondary">
     <label for="exampleInputPassword1">Upload a image</label>
