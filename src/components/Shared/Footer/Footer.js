@@ -5,6 +5,7 @@ import FooterCard from '../FooterCard/FooterCard';
 
 const footerData = [
     {
+        title:'About',
         emergency:'Emergency Dental Care',
         checkUp: 'Check Up',
         treatment:'Treatment of personal diseases',
